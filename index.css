@@ -1,0 +1,138 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+
+  color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  backdrop-filter: brightness(0.8);
+
+}
+
+/* Main Container */
+.container {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Search Section */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: #007acc;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Weather Info */
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-info img {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-info h2 {
+  margin-bottom: 10px;
+}
+
+.weather-info p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+
+  .weather-info img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .weather-info p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container h1 {
+    font-size: 1.5rem;
+  }
+
+  .weather-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .weather-info p {
+    font-size: 0.95rem;
+  }
+
+  .search-box input,
+  .search-box button {
+    font-size: 0.95rem;
+  }
+}
