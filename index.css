@@ -85,54 +85,5 @@ body {
 
 .weather-info p {
   font-size: 1.2rem;
-  margin: 5px 0;
-}
-
-
-@media screen and (max-width: 768px) {
-  .container {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .search-box {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .search-box input {
-    width: 100%;
-  }
-
-  .search-box button {
-    width: 100%;
-  }
-
-  .weather-info img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .weather-info p {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .container h1 {
-    font-size: 1.5rem;
-  }
-
-  .weather-info h2 {
-    font-size: 1.3rem;
-  }
-
-  .weather-info p {
-    font-size: 0.95rem;
-  }
-
-  .search-box input,
-  .search-box button {
-    font-size: 0.95rem;
-  }
+  margin: 5px 0;
 }

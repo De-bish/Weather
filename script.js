@@ -7,7 +7,8 @@ async function getWeather() {
     return;
   }
 
-  const url = https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city};
+  const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+
 
   try {
     const response = await fetch(url);
@@ -17,9 +18,10 @@ async function getWeather() {
 
     // Update the UI
     document.getElementById('cityName').textContent = data.location.name;
-    document.getElementById('temp').textContent = ${data.current.temp_c}°C;
+    document.getElementById('temp').textContent = `${data.current.temp_c}°C`;
     document.getElementById('desc').textContent = data.current.condition.text;
-    document.getElementById('icon').src = https:${data.current.condition.icon};
+    document.getElementById('icon').src = 'https:' + data.current.condition.icon;
+ 
 
     // BONUS: Change background based on weather condition
     const condition = data.current.condition.text.toLowerCase();
@@ -40,12 +42,12 @@ async function getWeather() {
     }
 
     // Apply it to body
-    document.body.style.backgroundImage = url('${bgUrl}');
+    document.body.style.backgroundImage = `url('${bgUrl}')`;
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
 
   } catch (error) {
     alert('Could not fetch weather data. Please try a valid city name.');
     console.error(error);
-  }
+  }
 }
